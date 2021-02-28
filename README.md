@@ -1,4 +1,4 @@
-## @watchers/eight-sleep
+## @qnzl/eight-sleep
 
 ### Setup
 
