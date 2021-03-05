@@ -2,8 +2,9 @@
 
 const { URLSearchParams } = require('url')
 const { promisify } = require('util')
-const EightSleep = require(`8slp`)
-const dayjs = require(`dayjs`)
+const { resolve } = require('path')
+const EightSleep = require('8slp')
+const dayjs = require('dayjs')
 const { Command } = require('commander')
 const fs = require('fs')
 
@@ -26,14 +27,16 @@ program
   .description('Dump to file')
   .option('--email [email]', 'Eight Sleep email')
   .option('--password [password]', 'Eight Sleep password')
-  .option('--export-format [format]', 'Export file format')
+  .option('--export-format <format>', 'Export file format', `{date}-8slp.json`)
   .option('--export-path [path]', 'Export file path')
   .action(dump)
 
+program.parseAsync(process.argv)
+
 async function dump(args) {
   const {
-    [`export-format`]: exportFormat = `{date}-8slp.json`,
-    [`export-path`]: exportPath,
+    exportFormat,
+    exportPath,
     email,
     password,
   } = args
@@ -44,7 +47,7 @@ async function dump(args) {
   const EXPORT_PATH = resolve(exportPath, filledExportFormat)
 
   const eightSleep = new EightSleep(`America/New_York`)
-  await eightSleep.authenticate(username, password)
+  await eightSleep.authenticate(email, password)
 
   const sessions = eightSleep.me.cache.userGet(`sessions`)
 

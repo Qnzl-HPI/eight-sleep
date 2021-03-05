@@ -1,6 +1,26 @@
 {
+  "name": "8slp-hpi",
+  "version": "0.0.1",
+  "main": "bin/8slp.js",
   "dependencies": {
-    "dayjs": "^1.10.4",
-    "yargs": "^16.2.0"
-  }
+    "8slp": "0.0.2",
+    "commander": "^7.1.0",
+    "dayjs": "^1.10.4"
+  },
+  "bin": {
+    "8slp": "bin/8slp.js"
+  },
+  "scripts": {
+    "build": "pkg bin/8slp.js --out-path pkg/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/takeamos/eight-sleep.git"
+  },
+  "author": "Madeline <maddie@qnzl.co>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/takeamos/eight-sleep/issues"
+  },
+  "homepage": "https://github.com/takeamos/eight-sleep#readme"
 }
