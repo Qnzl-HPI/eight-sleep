@@ -1,5 +1,5 @@
 {
-  "name": "8slp-hpi",
+  "name": "@hpi/eight-sleep",
   "version": "0.0.1",
   "main": "bin/8slp.js",
   "dependencies": {
@@ -15,12 +15,12 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/takeamos/eight-sleep.git"
+    "url": "git+https://github.com/qnzl-hpi/eight-sleep.git"
   },
   "author": "Madeline <maddie@qnzl.co>",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/takeamos/eight-sleep/issues"
+    "url": "https://github.com/qnzl-hpi/eight-sleep/issues"
   },
-  "homepage": "https://github.com/takeamos/eight-sleep#readme"
+  "homepage": "https://github.com/qnzl-hpi/eight-sleep#readme"
 }
