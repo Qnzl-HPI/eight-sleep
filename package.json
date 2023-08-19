@@ -1,14 +1,14 @@
 {
   "name": "@hpi/eight-sleep",
   "version": "0.0.1",
-  "main": "bin/8slp.js",
+  "main": "bin/eightsleep.js",
   "dependencies": {
     "8slp": "0.0.2",
     "commander": "^7.1.0",
     "dayjs": "^1.10.4"
   },
   "bin": {
-    "8slp": "bin/8slp.js"
+    "eightsleep": "bin/eightsleep.js"
   },
   "scripts": {
     "build": "pkg bin/8slp.js --out-path pkg/"
